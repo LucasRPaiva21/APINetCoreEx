@@ -5,6 +5,16 @@ VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCursoNetCore", "ApiCursoNetCore\ApiCursoNetCore.csproj", "{E644477D-7F6E-42B3-A933-16DEC778FFBE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.Application", "Api.Application", "{336C8985-2CF2-43C3-9B15-38E822377903}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.Domain", "Api.Domain", "{993FE78F-5F2B-43B0-B199-070481E3D0A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICursoNetCore.Domain", "APICursoNetCore.Domain\APICursoNetCore.Domain.csproj", "{3AFBCD74-D121-40C8-A823-34D588D2AB87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.Infrastructure", "Api.Infrastructure", "{3A8E2F0A-0DE0-4CBD-A1C7-CC0266767147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICursoNetCore.CrossCutting", "APICursoNetCore.CrossCutting\APICursoNetCore.CrossCutting.csproj", "{5DB56382-7238-40F1-8EE7-9B14E1F2E3F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +25,22 @@ Global
 		{E644477D-7F6E-42B3-A933-16DEC778FFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E644477D-7F6E-42B3-A933-16DEC778FFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E644477D-7F6E-42B3-A933-16DEC778FFBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AFBCD74-D121-40C8-A823-34D588D2AB87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AFBCD74-D121-40C8-A823-34D588D2AB87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AFBCD74-D121-40C8-A823-34D588D2AB87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AFBCD74-D121-40C8-A823-34D588D2AB87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB56382-7238-40F1-8EE7-9B14E1F2E3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB56382-7238-40F1-8EE7-9B14E1F2E3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB56382-7238-40F1-8EE7-9B14E1F2E3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB56382-7238-40F1-8EE7-9B14E1F2E3F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E644477D-7F6E-42B3-A933-16DEC778FFBE} = {336C8985-2CF2-43C3-9B15-38E822377903}
+		{3AFBCD74-D121-40C8-A823-34D588D2AB87} = {993FE78F-5F2B-43B0-B199-070481E3D0A0}
+		{5DB56382-7238-40F1-8EE7-9B14E1F2E3F2} = {3A8E2F0A-0DE0-4CBD-A1C7-CC0266767147}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CC2AF77-CE06-4E73-810F-DFDACFD04AA0}
