@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.Domain", "Api.Domain", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICursoNetCore.Domain", "APICursoNetCore.Domain\APICursoNetCore.Domain.csproj", "{3AFBCD74-D121-40C8-A823-34D588D2AB87}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.Infrastructure", "Api.Infrastructure", "{3A8E2F0A-0DE0-4CBD-A1C7-CC0266767147}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.CrossCutting", "Api.CrossCutting", "{3A8E2F0A-0DE0-4CBD-A1C7-CC0266767147}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICursoNetCore.CrossCutting", "APICursoNetCore.CrossCutting\APICursoNetCore.CrossCutting.csproj", "{5DB56382-7238-40F1-8EE7-9B14E1F2E3F2}"
 EndProject
