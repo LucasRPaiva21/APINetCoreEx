@@ -1,4 +1,5 @@
-﻿using APICursoNetCore.Domain.Entities;
+﻿using ApiCursoNetCore.Data.Mapping;
+using APICursoNetCore.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiCursoNetCore.Data.Context
@@ -12,6 +13,7 @@ namespace ApiCursoNetCore.Data.Context
         protected override void OnModelCreating (ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<UserEntity>(new UserMap().Configure);
         }
 
     }

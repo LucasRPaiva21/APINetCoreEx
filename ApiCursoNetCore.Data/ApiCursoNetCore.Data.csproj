@@ -17,4 +17,13 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Mapping\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APICursoNetCore.Domain\APICursoNetCore.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
