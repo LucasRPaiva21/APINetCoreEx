@@ -28,6 +28,7 @@ namespace ApiCursoNetCore.Data.Repository
 
                 _dataset.Remove(result);
                 await _context.SaveChangesAsync();
+                return true;
 
             }
             catch (Exception ex)
@@ -58,6 +59,11 @@ namespace ApiCursoNetCore.Data.Repository
             }
 
             return item;
+        }
+
+        public async Task<bool> ExistAsync(Guid id)
+        {
+            return await _dataset.AnyAsync(p => p.Id.Equals(id));
         }
 
         public Task<T> SelectAsync(Guid id)
