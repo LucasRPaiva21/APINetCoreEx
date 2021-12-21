@@ -11,4 +11,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\APICursoNetCore.CrossCutting\APICursoNetCore.CrossCutting.csproj" />
+    <ProjectReference Include="..\ApiCursoNetCore.Data\ApiCursoNetCore.Data.csproj" />
+  </ItemGroup>
+
 </Project>
