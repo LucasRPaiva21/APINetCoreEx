@@ -15,11 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.CrossCutting", "Api.Cro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APICursoNetCore.CrossCutting", "APICursoNetCore.CrossCutting\APICursoNetCore.CrossCutting.csproj", "{5DB56382-7238-40F1-8EE7-9B14E1F2E3F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCursoNetCore.Data", "ApiCursoNetCore.Data\ApiCursoNetCore.Data.csproj", "{1B717C4C-4BB8-42EF-A873-63E4230449C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiCursoNetCore.Data", "ApiCursoNetCore.Data\ApiCursoNetCore.Data.csproj", "{1B717C4C-4BB8-42EF-A873-63E4230449C6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.Data", "Api.Data", "{879D2ED7-55BD-4408-82F3-09871FBE6646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiCursoNetCore.Service", "ApiCursoNetCore.Service\ApiCursoNetCore.Service.csproj", "{CB21BA5C-104C-4212-A0B7-8F1808FB87E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiCursoNetCore.Service", "ApiCursoNetCore.Service\ApiCursoNetCore.Service.csproj", "{CB21BA5C-104C-4212-A0B7-8F1808FB87E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api.Service", "Api.Service", "{2C407E30-1BCC-4F66-AC58-76DA7E331D15}"
 EndProject
