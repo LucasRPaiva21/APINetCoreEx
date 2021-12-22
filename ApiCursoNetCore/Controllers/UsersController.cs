@@ -1,4 +1,5 @@
-﻿using APICursoNetCore.Domain.Interfaces.Services.User;
+﻿using APICursoNetCore.Domain.Entities;
+using APICursoNetCore.Domain.Interfaces.Services.User;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -55,5 +56,34 @@ namespace ApiCursoNetCore.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
+
+        [HttpPost]
+        public async Task<ActionResult> Post([FromBody] UserEntity user)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var result = await _service.Post(user);
+                if(result != null)
+                {
+                    return Created(new Uri(Url.Link("GetWithId", new { id = result.Id })), result);
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (ArgumentException e)
+            {
+
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+            }
+        }
+
+
     }
 }
