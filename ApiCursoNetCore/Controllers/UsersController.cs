@@ -111,6 +111,25 @@ namespace ApiCursoNetCore.Controllers
             }
         }
 
+        [HttpDelete]
+        [Route("{id}", Name = "GetWithId")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                return Ok(await _service.Delete(id));
+            }
+            catch (ArgumentException e)
+            {
+
+                return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+            }
+        }
 
     }
 }
