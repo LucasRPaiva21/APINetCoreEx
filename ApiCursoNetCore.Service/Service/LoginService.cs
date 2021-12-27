@@ -1,4 +1,5 @@
-﻿using APICursoNetCore.Domain.Entities;
+﻿using APICursoNetCore.Domain.DTOs;
+using APICursoNetCore.Domain.Entities;
 using APICursoNetCore.Domain.Interfaces.Services.User;
 using APICursoNetCore.Domain.Repository;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace ApiCursoNetCore.Service.Service
             _repository = repository;
         }
 
-        public async Task<object> FindByLogin(UserEntity user)
+        public async Task<object> FindByLogin(LoginDTO user)
         {
             var baseUser = new UserEntity();
 
