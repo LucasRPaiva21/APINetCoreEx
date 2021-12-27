@@ -1,11 +1,13 @@
 using ApiCursoNetCore.Data.Context;
 using APICursoNetCore.CrossCutting.DependencyInjection;
+using APICursoNetCore.Domain.Security;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System;
 
@@ -25,6 +27,16 @@ namespace ApiCursoNetCore
         {           
             ConfigureService.ConfigureDependenciesService(services);
             ConfigureRepository.ConfigureDependenciesRepository(services);
+
+            var signingConfiguration = new SigningConfigurations();
+            services.AddSingleton(signingConfiguration);
+
+            var tokenConfigurations = new TokenConfiguration();
+            new ConfigureFromConfigurationOptions<TokenConfiguration>(
+                Configuration.GetSection("TokenConfigurations"))
+                .Configure(tokenConfigurations);
+            services.AddSingleton(tokenConfigurations);
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
