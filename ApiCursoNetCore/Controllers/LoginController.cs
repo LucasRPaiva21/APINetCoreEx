@@ -1,5 +1,6 @@
 ﻿using APICursoNetCore.Domain.DTOs;
 using APICursoNetCore.Domain.Interfaces.Services.User;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -11,7 +12,7 @@ namespace ApiCursoNetCore.Controllers
     [Route("api/[controller]")]
     public class LoginController : ControllerBase
     {
-       
+       [AllowAnonymous]
         [HttpPost]
         public async Task<object> Login([FromBody] LoginDTO loginDTO, [FromServices] ILoginService service)
         {

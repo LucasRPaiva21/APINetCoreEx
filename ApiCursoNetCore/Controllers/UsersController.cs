@@ -1,5 +1,6 @@
 ﻿using APICursoNetCore.Domain.Entities;
 using APICursoNetCore.Domain.Interfaces.Services.User;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -18,6 +19,7 @@ namespace ApiCursoNetCore.Controllers
             _service = service;
         }
 
+       [Authorize("Bearer")]
        [HttpGet]
        public async Task<ActionResult> GetAll()
         {
@@ -37,6 +39,7 @@ namespace ApiCursoNetCore.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpGet]
         [Route("{id}", Name = "GetWithId")]
         public async Task<ActionResult> Get(Guid id)
@@ -57,6 +60,7 @@ namespace ApiCursoNetCore.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] UserEntity user)
         {
@@ -84,6 +88,7 @@ namespace ApiCursoNetCore.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpPut]
         public async Task<ActionResult> Put([FromBody] UserEntity user)
         {
@@ -111,6 +116,7 @@ namespace ApiCursoNetCore.Controllers
             }
         }
 
+        [Authorize("Bearer")]
         [HttpDelete]
         [Route("{id}", Name = "GetWithId")]
         public async Task<ActionResult> Delete(Guid id)

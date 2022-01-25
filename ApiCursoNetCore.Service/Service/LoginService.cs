@@ -66,7 +66,11 @@ namespace ApiCursoNetCore.Service.Service
             }
             else
             {
-                return null;
+                return new
+                {
+                    authenticated = false,
+                    message = "Falha ao autenticar"
+                };
             }
         }
 
